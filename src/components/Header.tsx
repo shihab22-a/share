@@ -3,14 +3,12 @@ import {
   Download,
   Bookmark,
   History,
-  Upload,
   ShieldCheck,
   Languages,
   Monitor,
   Smartphone,
   Film,
   Zap,
-  Globe,
 } from 'lucide-react';
 import { useApp } from '../context/AppContext';
 import { useDownload } from '../context/DownloadContext';
@@ -21,9 +19,7 @@ export const Header: React.FC = () => {
     setLanguage,
     bookmarkedIds,
     setFilters,
-    openUploadModal,
     openAdminModal,
-    openGuideModal,
     isAdmin,
   } = useApp();
 
@@ -150,36 +146,20 @@ export const Header: React.FC = () => {
               )}
             </button>
 
-            {/* Free Hosting & Drive Setup Guide Button */}
-            <button
-              onClick={openGuideModal}
-              title={isBn ? 'ফ্রী হোস্টিং ও গুগল ড্রাইভ গাইড' : 'Free Hosting & Google Drive Guide'}
-              className="hidden lg:flex items-center gap-1.5 px-2.5 py-1.5 rounded-lg bg-cyan-950/70 border border-cyan-800/70 text-cyan-300 hover:text-white hover:bg-cyan-900/60 font-medium text-xs transition-colors cursor-pointer"
-            >
-              <Globe className="w-3.5 h-3.5 text-cyan-400" />
-              <span>{isBn ? 'হোস্টিং গাইড' : 'Deploy Guide'}</span>
-            </button>
-
-            {/* Upload File Button */}
-            <button
-              onClick={openUploadModal}
-              className="hidden sm:flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-emerald-600 hover:bg-emerald-500 text-white font-medium text-xs shadow-md shadow-emerald-950 transition-colors cursor-pointer"
-            >
-              <Upload className="w-3.5 h-3.5" />
-              <span>{isBn ? 'ফাইল আপলোড' : 'Upload'}</span>
-            </button>
-
             {/* Admin Panel Button */}
             <button
               onClick={openAdminModal}
               title={isAdmin ? (isBn ? 'এডমিন ড্যাশবোর্ড' : 'Admin Dashboard') : (isBn ? 'এডমিন লগইন' : 'Admin Login')}
-              className={`p-2 rounded-lg border text-xs font-semibold transition-all cursor-pointer ${
+              className={`flex items-center gap-1.5 px-2.5 py-1.5 rounded-lg border text-xs font-semibold transition-all cursor-pointer ${
                 isAdmin
                   ? 'bg-indigo-950/80 border-indigo-500/60 text-indigo-300 hover:border-indigo-400'
                   : 'bg-slate-900 border-slate-800 text-slate-400 hover:text-slate-200 hover:border-slate-700'
               }`}
             >
-              <ShieldCheck className="w-4 h-4" />
+              <ShieldCheck className="w-4 h-4 text-indigo-400" />
+              <span className="hidden sm:inline">
+                {isAdmin ? (isBn ? 'এডমিন' : 'Admin') : (isBn ? 'এডমিন লগইন' : 'Admin')}
+              </span>
             </button>
 
           </div>

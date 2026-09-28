@@ -16,6 +16,7 @@ import {
   LogOut,
   Search,
   Check,
+  Globe,
 } from 'lucide-react';
 import { useApp } from '../context/AppContext';
 import { AppFile, Platform, Category } from '../types';
@@ -31,6 +32,7 @@ export const AdminDashboard: React.FC = () => {
     updateFile,
     resetCatalogToDefault,
     openUploadModal,
+    openGuideModal,
     setSelectedFile,
     adClickCount,
     language,
@@ -48,12 +50,12 @@ export const AdminDashboard: React.FC = () => {
   // Handle Login
   const handleLogin = (e: React.FormEvent) => {
     e.preventDefault();
-    if (passcode.trim() === 'admin123') {
+    if (passcode.trim() === '@shihab258011@') {
       setIsAdmin(true);
       setErrorMsg('');
       showToast(isBn ? 'এডমিন হিসেবে লগইন সফল হয়েছে!' : 'Logged in as Admin successfully!');
     } else {
-      setErrorMsg(isBn ? 'ভুল পাসওয়ার্ড! (ডিফল্ট: admin123)' : 'Incorrect password! (Default: admin123)');
+      setErrorMsg(isBn ? 'ভুল পাসওয়ার্ড! সঠিক এডমিন পাসওয়ার্ড দিন।' : 'Incorrect admin passcode!');
     }
   };
 
@@ -155,7 +157,7 @@ export const AdminDashboard: React.FC = () => {
                     type="password"
                     value={passcode}
                     onChange={(e) => setPasscode(e.target.value)}
-                    placeholder="admin123"
+                    placeholder="••••••••••••"
                     className="w-full px-3.5 py-2.5 bg-slate-950 border border-slate-700 rounded-xl text-white text-sm focus:outline-none focus:ring-2 focus:ring-indigo-500"
                   />
                   {errorMsg && <p className="text-xs text-rose-400 mt-1.5">{errorMsg}</p>}
@@ -167,16 +169,6 @@ export const AdminDashboard: React.FC = () => {
                 >
                   {isBn ? 'ড্যাশবোর্ডে প্রবেশ করুন' : 'Unlock Dashboard'}
                 </button>
-
-                <div className="pt-2 text-center">
-                  <button
-                    type="button"
-                    onClick={() => setPasscode('admin123')}
-                    className="text-xs text-indigo-400 hover:text-indigo-300 underline cursor-pointer"
-                  >
-                    {isBn ? 'ডিফল্ট পাসওয়ার্ড ব্যবহার করুন (admin123)' : 'Quick Fill Default: admin123'}
-                  </button>
-                </div>
               </form>
             </div>
           ) : (
@@ -232,6 +224,15 @@ export const AdminDashboard: React.FC = () => {
                 </div>
 
                 <div className="flex items-center gap-2">
+                  <button
+                    onClick={openGuideModal}
+                    title={isBn ? 'ফ্রী হোস্টিং ও গুগল ড্রাইভ সেটআপ গাইড' : 'Free Hosting & Google Drive Guide'}
+                    className="px-2.5 py-2 rounded-lg bg-cyan-950/80 border border-cyan-800/80 text-cyan-300 hover:text-white hover:bg-cyan-900/60 font-medium text-xs flex items-center gap-1.5 transition-colors cursor-pointer"
+                  >
+                    <Globe className="w-3.5 h-3.5 text-cyan-400" />
+                    <span>{isBn ? 'হোস্টিং গাইড' : 'Hosting Guide'}</span>
+                  </button>
+
                   <button
                     onClick={openUploadModal}
                     className="px-3 py-2 rounded-lg bg-emerald-600 hover:bg-emerald-500 text-white font-medium text-xs flex items-center gap-1.5 transition-colors cursor-pointer"

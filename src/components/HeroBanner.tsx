@@ -1,9 +1,9 @@
 import React from 'react';
-import { Search, X, CheckCircle2, Shield, Zap, Sparkles, HardDrive, Globe } from 'lucide-react';
+import { Search, X, CheckCircle2, Shield, Zap } from 'lucide-react';
 import { useApp } from '../context/AppContext';
 
 export const HeroBanner: React.FC = () => {
-  const { language, filters, setFilters, files, openGuideModal } = useApp();
+  const { language, filters, setFilters, files } = useApp();
   const isBn = language === 'bn';
 
   return (
@@ -82,13 +82,7 @@ export const HeroBanner: React.FC = () => {
             <span>{isBn ? '১০০% ভাইরাস-মুক্ত স্ক্যান' : 'Malware Scanned'}</span>
           </span>
           <span aria-hidden="true" className="text-slate-600">·</span>
-          <button
-            onClick={openGuideModal}
-            className="flex items-center gap-1 text-cyan-400 hover:text-cyan-300 underline underline-offset-2 cursor-pointer transition-colors"
-          >
-            <HardDrive className="w-3.5 h-3.5" />
-            <span>{isBn ? 'গুগল ড্রাইভ ও ফ্রী হোস্টিং গাইড' : 'Drive & Free Hosting Setup'}</span>
-          </button>
+          <span>{isBn ? 'প্রতিটি ফাইলের আলাদা লিংক' : 'Direct Share Links'}</span>
         </div>
 
       </div>
