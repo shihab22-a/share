@@ -153,17 +153,25 @@ export const FileUploadModal: React.FC = () => {
         {/* Header */}
         <div className="flex items-center justify-between p-4 sm:p-5 border-b border-slate-800 bg-slate-950/70">
           <div className="flex items-center gap-2.5">
-            <div className="p-2 rounded-xl bg-emerald-950/80 border border-emerald-800/60 text-emerald-400">
-              <Upload className="w-5 h-5" />
+            <div className="w-9 h-9 rounded-xl border border-cyan-500/40 bg-slate-950 p-0.5 shadow-md flex items-center justify-center overflow-hidden">
+              <img
+                src="/src/assets/images/sharevault_bd_logo_1790584102515.jpg"
+                alt="ShareVault BD"
+                referrerPolicy="no-referrer"
+                className="w-full h-full object-contain"
+              />
             </div>
             <div>
-              <h3 className="text-base font-bold text-white">
-                {isBn ? 'নতুন ফাইল / অ্যাপ আপলোড করুন' : 'Upload New File or App'}
+              <h3 className="text-base font-bold text-white flex items-center gap-1.5">
+                <span>{isBn ? 'নতুন ফাইল / অ্যাপ আপলোড' : 'Upload New File or App'}</span>
+                <span className="text-[10px] font-bold text-emerald-400 bg-emerald-950/80 border border-emerald-800 px-1.5 py-0.5 rounded">
+                  Admin
+                </span>
               </h3>
               <p className="text-xs text-slate-400">
                 {isBn
-                  ? 'আপনার ফাইল আপলোড করে আলাদা ইউনিক লিংকের মাধ্যমে সবার সাথে শেয়ার করুন'
-                  : 'Add software, APKs, or media to generate a unique share link'}
+                  ? 'SHARE VAULT BD পোর্টাল ও ক্যাটালগে নতুন ফাইল যুক্ত করুন'
+                  : 'Add verified software, APKs, or media to ShareVault BD catalog'}
               </p>
             </div>
           </div>

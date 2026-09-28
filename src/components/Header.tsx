@@ -46,20 +46,23 @@ export const Header: React.FC = () => {
               }}
               className="flex items-center gap-2.5 group text-left focus:outline-none"
             >
-              <div className="w-10 h-10 rounded-xl bg-gradient-to-tr from-cyan-600 to-emerald-500 p-0.5 shadow-md shadow-cyan-900/30 group-hover:scale-105 transition-transform">
-                <div className="w-full h-full bg-slate-950 rounded-[10px] flex items-center justify-center">
-                  <Download className="w-5 h-5 text-cyan-400 group-hover:text-emerald-400 transition-colors" />
-                </div>
+              <div className="relative w-11 h-11 rounded-xl bg-slate-900 border border-cyan-500/40 p-1 shadow-lg shadow-cyan-950/60 group-hover:border-cyan-400 transition-all flex items-center justify-center overflow-hidden">
+                <img
+                  src="/src/assets/images/sharevault_bd_logo_1790584102515.jpg"
+                  alt="ShareVault BD Logo"
+                  referrerPolicy="no-referrer"
+                  className="w-full h-full object-contain rounded-lg"
+                />
               </div>
               <div>
-                <span className="text-xl font-bold tracking-tight text-white flex items-center gap-1.5">
-                  Share<span className="text-cyan-400">Vault</span>
-                  <span className="text-[10px] uppercase font-semibold text-emerald-400 bg-emerald-950/60 border border-emerald-800/60 px-1.5 py-0.2 rounded">
-                    BD Hub
-                  </span>
+                <span className="text-xl font-black tracking-tight text-white flex items-center gap-1.5 font-sans">
+                  <span>SHARE</span>
+                  <span className="text-cyan-400">VAULT</span>
+                  <span className="text-[#FF5722] font-black">B</span>
+                  <span className="text-[#006A4E] font-black">D</span>
                 </span>
-                <p className="text-[11px] text-slate-400 font-medium">
-                  {isBn ? 'সফটওয়্যার ও ফাইল শেয়ারিং পোর্টাল' : 'Apps & File Sharing Hub'}
+                <p className="text-[10px] text-slate-400 font-semibold tracking-wider uppercase">
+                  {isBn ? 'ইউর রিলায়্যাবল ডাউনলোড হাব' : 'Your Reliable Download Hub'}
                 </p>
               </div>
             </button>

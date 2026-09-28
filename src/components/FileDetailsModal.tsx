@@ -78,8 +78,16 @@ export const FileDetailsModal: React.FC = () => {
         
         {/* Header Bar */}
         <div className="flex items-center justify-between p-4 sm:p-5 border-b border-slate-800 bg-slate-950/60">
-          <div className="flex items-center gap-2 text-xs text-slate-400 font-medium">
-            <span>{isBn ? 'ফাইল বিশদ বিবরণ' : 'File Details'}</span>
+          <div className="flex items-center gap-2.5 text-xs text-slate-400 font-medium">
+            <div className="w-6 h-6 rounded-md overflow-hidden border border-cyan-500/40 bg-slate-950 p-0.5 shadow">
+              <img
+                src="/src/assets/images/sharevault_bd_logo_1790584102515.jpg"
+                alt="ShareVault BD"
+                referrerPolicy="no-referrer"
+                className="w-full h-full object-contain"
+              />
+            </div>
+            <span className="font-bold text-slate-200">ShareVault BD</span>
             <span aria-hidden="true" className="text-slate-600">·</span>
             <span className="uppercase text-cyan-400 font-bold">{selectedFile.platform}</span>
             <span aria-hidden="true" className="text-slate-600">·</span>

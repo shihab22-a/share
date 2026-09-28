@@ -41,15 +41,20 @@ export const ShareModal: React.FC = () => {
         
         {/* Header */}
         <div className="flex items-center justify-between pb-3 border-b border-slate-800 mb-4">
-          <div className="flex items-center gap-2">
-            <div className="p-1.5 rounded-lg bg-cyan-950 text-cyan-400">
-              <Share2 className="w-4 h-4" />
+          <div className="flex items-center gap-2.5">
+            <div className="w-8 h-8 rounded-lg overflow-hidden border border-cyan-500/40 bg-slate-950 p-0.5 shadow shrink-0">
+              <img
+                src="/src/assets/images/sharevault_bd_logo_1790584102515.jpg"
+                alt="ShareVault BD"
+                referrerPolicy="no-referrer"
+                className="w-full h-full object-contain"
+              />
             </div>
             <div>
-              <h3 className="text-sm font-bold text-white">
-                {isBn ? 'ফাইলের আলাদা লিংক শেয়ার করুন' : 'Share File Direct Link'}
+              <h3 className="text-sm font-bold text-white flex items-center gap-1.5">
+                <span>{isBn ? 'ফাইলের আলাদা লিংক শেয়ার' : 'Share File Direct Link'}</span>
               </h3>
-              <p className="text-[11px] text-slate-400">
+              <p className="text-[11px] text-cyan-300 truncate max-w-[200px]">
                 {shareTargetFile.title}
               </p>
             </div>

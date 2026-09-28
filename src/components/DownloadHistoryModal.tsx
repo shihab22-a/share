@@ -28,8 +28,13 @@ export const DownloadHistoryModal: React.FC = () => {
         {/* Header */}
         <div className="flex items-center justify-between p-4 sm:p-5 border-b border-slate-800 bg-slate-950/60">
           <div className="flex items-center gap-2.5">
-            <div className="p-2 rounded-xl bg-amber-950/80 border border-amber-800/60 text-amber-400">
-              <History className="w-5 h-5" />
+            <div className="w-9 h-9 rounded-xl border border-cyan-500/40 bg-slate-950 p-0.5 shadow-md flex items-center justify-center overflow-hidden shrink-0">
+              <img
+                src="/src/assets/images/sharevault_bd_logo_1790584102515.jpg"
+                alt="ShareVault BD"
+                referrerPolicy="no-referrer"
+                className="w-full h-full object-contain"
+              />
             </div>
             <div>
               <h3 className="text-base font-bold text-white flex items-center gap-2">
@@ -39,7 +44,7 @@ export const DownloadHistoryModal: React.FC = () => {
                 </span>
               </h3>
               <p className="text-xs text-slate-400">
-                {isBn ? 'আপনার সম্পন্নকৃত সকল ডাউনলোডের তালিকা' : 'Log of all files downloaded to your device'}
+                {isBn ? 'ShareVault BD · সম্পন্নকৃত ডাউনলোডের তালিকা' : 'ShareVault BD · Log of completed downloads'}
               </p>
             </div>
           </div>

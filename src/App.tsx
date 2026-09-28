@@ -205,13 +205,23 @@ const MainContent: React.FC = () => {
       {/* Footer */}
       <footer className="border-t border-slate-800 bg-slate-950 py-8 px-4 sm:px-6 lg:px-8 mt-auto">
         <div className="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-500">
-          <div className="flex items-center gap-2">
-            <div className="w-6 h-6 rounded-md bg-gradient-to-tr from-cyan-600 to-emerald-500 flex items-center justify-center text-slate-950 font-bold text-xs">
-              S
+          <div className="flex items-center gap-2.5">
+            <div className="w-8 h-8 rounded-lg overflow-hidden border border-cyan-500/40 bg-slate-900 p-0.5 shadow-md">
+              <img
+                src="/src/assets/images/sharevault_bd_logo_1790584102515.jpg"
+                alt="ShareVault BD"
+                referrerPolicy="no-referrer"
+                className="w-full h-full object-contain rounded"
+              />
             </div>
-            <span className="text-slate-300 font-semibold">ShareVault</span>
-            <span aria-hidden="true" className="text-slate-700">·</span>
-            <span>{isBn ? 'ফ্রি ও ভেরিফায়েড ফাইল হাব' : 'Fast App & File Hub'}</span>
+            <div>
+              <span className="text-slate-200 font-bold tracking-tight">
+                SHARE <span className="text-cyan-400">VAULT</span>{' '}
+                <span className="text-[#FF5722]">B</span>
+                <span className="text-[#006A4E]">D</span>
+              </span>
+              <p className="text-[10px] text-slate-500">Your Reliable Software Download Hub</p>
+            </div>
           </div>
 
           <div className="flex flex-wrap items-center gap-4 text-[11px]">

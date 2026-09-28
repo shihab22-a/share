@@ -14,6 +14,24 @@ export const HeroBanner: React.FC = () => {
 
       <div className="max-w-4xl mx-auto text-center relative z-10">
         
+        {/* Brand Shield Showcase Badge */}
+        <div className="inline-flex items-center gap-3 px-4 py-2 rounded-2xl bg-slate-900/90 border border-cyan-500/30 shadow-xl shadow-cyan-950/40 mb-6 backdrop-blur-md">
+          <img
+            src="/src/assets/images/sharevault_bd_logo_1790584102515.jpg"
+            alt="ShareVault BD Safe Emblem"
+            referrerPolicy="no-referrer"
+            className="w-9 h-9 object-contain rounded-lg drop-shadow"
+          />
+          <div className="text-left">
+            <div className="text-xs font-black tracking-wider text-white">
+              SHARE <span className="text-cyan-400">VAULT</span> <span className="text-[#FF5722]">B</span><span className="text-[#006A4E]">D</span>
+            </div>
+            <div className="text-[10px] text-cyan-300 font-medium">
+              YOUR RELIABLE SOFTWARE DOWNLOAD HUB
+            </div>
+          </div>
+        </div>
+
         {/* Title & Tagline */}
         <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-white tracking-tight leading-tight">
           {isBn ? (

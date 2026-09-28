@@ -66,20 +66,25 @@ export const HostingGuideModal: React.FC<{ isOpen: boolean; onClose: () => void 
         {/* Header */}
         <div className="flex items-center justify-between p-4 sm:p-5 border-b border-slate-800 bg-slate-950/70">
           <div className="flex items-center gap-2.5">
-            <div className="p-2 rounded-xl bg-cyan-950/80 border border-cyan-800/60 text-cyan-400">
-              <Globe className="w-5 h-5" />
+            <div className="w-9 h-9 rounded-xl border border-cyan-500/40 bg-slate-950 p-0.5 shadow-md flex items-center justify-center overflow-hidden shrink-0">
+              <img
+                src="/src/assets/images/sharevault_bd_logo_1790584102515.jpg"
+                alt="ShareVault BD"
+                referrerPolicy="no-referrer"
+                className="w-full h-full object-contain"
+              />
             </div>
             <div>
               <h3 className="text-base font-bold text-white flex items-center gap-2">
                 <span>{isBn ? 'ফ্রী হোস্টিং ও গুগল ড্রাইভ সেটআপ গাইড' : 'Free Hosting & Google Drive Setup Guide'}</span>
                 <span className="text-[10px] font-semibold uppercase px-2 py-0.5 rounded-full bg-emerald-950 border border-emerald-800 text-emerald-400">
-                  Step-by-Step
+                  Admin Guide
                 </span>
               </h3>
               <p className="text-xs text-slate-400">
                 {isBn
-                  ? 'গুগল ড্রাইভ থেকে সরাসরি ফাইল ডাউনলোড এবং Vercel/Netlify তে ফ্রী হোস্টিং এর পূর্ণাঙ্গ নিয়মাবলী'
-                  : 'How to deploy this website on free hosting and serve files directly from Google Drive'}
+                  ? 'SHARE VAULT BD · গুগল ড্রাইভ থেকে সরাসরি ডাউনলোড এবং Vercel/Netlify তে ফ্রী হোস্টিং গাইড'
+                  : 'SHARE VAULT BD · Deploy on free hosting and serve files directly from Google Drive'}
               </p>
             </div>
           </div>

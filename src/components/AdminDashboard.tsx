@@ -89,8 +89,13 @@ export const AdminDashboard: React.FC = () => {
         {/* Header */}
         <div className="flex items-center justify-between p-4 sm:p-5 border-b border-slate-800 bg-slate-950/70">
           <div className="flex items-center gap-2.5">
-            <div className="p-2 rounded-xl bg-indigo-950/80 border border-indigo-800/60 text-indigo-400">
-              <ShieldCheck className="w-5 h-5" />
+            <div className="w-9 h-9 rounded-xl border border-cyan-500/40 bg-slate-900 p-0.5 shadow-md flex items-center justify-center overflow-hidden">
+              <img
+                src="/src/assets/images/sharevault_bd_logo_1790584102515.jpg"
+                alt="ShareVault BD"
+                referrerPolicy="no-referrer"
+                className="w-full h-full object-contain"
+              />
             </div>
             <div>
               <h3 className="text-base font-bold text-white flex items-center gap-2">
@@ -102,7 +107,7 @@ export const AdminDashboard: React.FC = () => {
                 )}
               </h3>
               <p className="text-xs text-slate-400">
-                {isBn ? 'ফাইল ম্যানেজমেন্ট, পরিসংখ্যান এবং সাইট সেটিংস' : 'File catalog management & analytics'}
+                {isBn ? 'SHARE VAULT BD · ফাইল ম্যানেজমেন্ট ও সেটিংস' : 'SHARE VAULT BD · Control & Analytics'}
               </p>
             </div>
           </div>
@@ -137,14 +142,19 @@ export const AdminDashboard: React.FC = () => {
           {!isAdmin ? (
             <div className="max-w-md mx-auto py-8">
               <div className="text-center mb-6">
-                <div className="w-14 h-14 rounded-2xl bg-indigo-950/60 border border-indigo-800/80 flex items-center justify-center text-indigo-400 mx-auto mb-3 shadow-lg">
-                  <Shield className="w-7 h-7" />
+                <div className="w-20 h-20 rounded-2xl bg-slate-950 border border-cyan-500/40 p-1.5 mx-auto mb-4 shadow-xl shadow-cyan-950/60 overflow-hidden flex items-center justify-center">
+                  <img
+                    src="/src/assets/images/sharevault_bd_logo_1790584102515.jpg"
+                    alt="ShareVault BD Vault"
+                    referrerPolicy="no-referrer"
+                    className="w-full h-full object-contain"
+                  />
                 </div>
-                <h4 className="text-lg font-bold text-white">
-                  {isBn ? 'এডমিন লগইন প্রয়োজন' : 'Admin Authentication'}
+                <h4 className="text-xl font-black text-white tracking-tight">
+                  SHARE <span className="text-cyan-400">VAULT</span> <span className="text-[#FF5722]">B</span><span className="text-[#006A4E]">D</span>
                 </h4>
                 <p className="text-xs text-slate-400 mt-1">
-                  {isBn ? 'ফাইল ম্যানেজ বা মুছে ফেলতে এডমিন পাসওয়ার্ড প্রবেশ করান।' : 'Enter admin passcode to manage the file repository.'}
+                  {isBn ? 'এডমিন ড্যাশবোর্ডে প্রবেশ করতে সিকিউরিটি পাসওয়ার্ড প্রদান করুন।' : 'Enter admin passcode to unlock the secure vault portal.'}
                 </p>
               </div>
 
