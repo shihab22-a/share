@@ -1,0 +1,6 @@
+{
+  "name": "ShareVault - App & File Hub",
+  "description": "প্রিমিয়াম ও সাধারণ সফটওয়্যার, অ্যান্ড্রয়েড অ্যাপ, মুভি ও ফাইল শেয়ারিং প্ল্যাটফর্ম এবং স্মার্ট ডাউনলোড ম্যানেজার।",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
